@@ -1,0 +1,25 @@
+datadog:
+  apiKey: YOUR_DATADOG_API_KEY
+  site: datadoghq.com  # or datadoghq.eu, etc.
+
+  # Enable APM, logs, and process monitoring for richer map views
+  apm:
+    enabled: true
+  logs:
+    enabled: true
+    containerCollectAll: true
+  processAgent:
+    enabled: true
+  containerExcludeLogs: "image:datadog/agent"  # optional
+
+agents:
+  containerLogs:
+    enabled: true
+
+clusterAgent:
+  enabled: true
+  metricsProvider:
+    enabled: true
+
+kubeStateMetrics:
+  enabled: true
